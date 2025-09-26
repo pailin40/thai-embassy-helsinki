@@ -243,10 +243,9 @@ const ConsularServices = () => {
                       ))}
                     </ul>
                   </div>
-                  <Button className="w-full">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Email for Appointment
-                  </Button>
+                  <div className="text-center pt-2">
+                    <p className="text-sm text-muted-foreground">Email required for appointment</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -285,23 +284,18 @@ const ConsularServices = () => {
                 </div>
               </div>
               
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Email Documents
-                </Button>
-                <Button size="lg" variant="outline">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Forms
-                </Button>
+              <div className="mt-6 text-center">
+                <p className="text-sm text-muted-foreground">Need help? Use the Quick Actions section below for forms and support.</p>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Service Guide */}
+        {/* Complete Application Process */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Service Guide</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Complete Application Process</h2>
+          
+          {/* Service Guide Steps */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {serviceGuideSteps.map((step, index) => (
               <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer hover-scale">
@@ -315,79 +309,73 @@ const ConsularServices = () => {
               </Card>
             ))}
           </div>
-          
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button>
-              <Download className="mr-2 h-4 w-4" />
-              Download Forms
-            </Button>
-            <Button variant="outline">
-              <MessageCircle className="mr-2 h-4 w-4" />
-              Contact Support
-            </Button>
-            <Button variant="outline">
-              <HelpCircle className="mr-2 h-4 w-4" />
-              View FAQ
-            </Button>
+
+          {/* Appointment Requirements */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            <Card className="shadow-card">
+              <CardHeader>
+                <CardTitle>Appointment Requirements</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {appointmentTypes.map((apt, index) => (
+                    <div key={index} className="flex items-center justify-between p-4 rounded-lg bg-secondary/30">
+                      <div>
+                        <p className="font-medium text-foreground">{apt.service}</p>
+                        <p className="text-sm text-muted-foreground">{apt.duration}</p>
+                      </div>
+                      <Badge variant={apt.requirement === "Required" ? "default" : "secondary"}>
+                        {apt.requirement}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card">
+              <CardHeader>
+                <CardTitle>Quick Actions</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Button className="w-full" size="lg">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Email for Appointment
+                </Button>
+                <Button className="w-full" variant="outline">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Forms
+                </Button>
+                <Button className="w-full" variant="outline">
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Contact Support
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
-        {/* Appointment Information */}
+        {/* Contact Information */}
         <section className="mb-16">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Appointment Guidelines</h2>
-              <Card className="shadow-card">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    {appointmentTypes.map((apt, index) => (
-                      <div key={index} className="flex items-center justify-between p-4 rounded-lg bg-secondary/30">
-                        <div>
-                          <p className="font-medium text-foreground">{apt.service}</p>
-                          <p className="text-sm text-muted-foreground">{apt.duration}</p>
-                        </div>
-                        <Badge variant={apt.requirement === "Required" ? "default" : "secondary"}>
-                          {apt.requirement}
-                        </Badge>
-                      </div>
-                    ))}
+
+          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Contact Information</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {emergencyContacts.map((contact, index) => (
+              <Card key={index} className="shadow-card">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {contact.type.includes("Email") ? (
+                      <Mail className="h-6 w-6 text-primary" />
+                    ) : (
+                      <Phone className="h-6 w-6 text-primary" />
+                    )}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Online appointment booking is recommended to avoid waiting times. 
-                      Walk-in services are limited and subject to availability.
-                    </p>
-                    <Button className="w-full">Email for Appointment</Button>
-                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{contact.type}</h3>
+                  <p className="text-primary font-mono mb-1">{contact.contact}</p>
+                  <p className="text-sm text-muted-foreground">{contact.hours}</p>
                 </CardContent>
               </Card>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Contact Information</h2>
-              <div className="space-y-4">
-                {emergencyContacts.map((contact, index) => (
-                  <Card key={index} className="shadow-card">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                          {contact.type.includes("Email") ? (
-                            <Mail className="h-6 w-6 text-primary" />
-                          ) : (
-                            <Phone className="h-6 w-6 text-primary" />
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-foreground">{contact.type}</h3>
-                          <p className="text-primary font-mono">{contact.contact}</p>
-                          <p className="text-sm text-muted-foreground">{contact.hours}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
