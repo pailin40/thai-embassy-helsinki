@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/thai-embassy-hero.jpg";
+import thailandScenic from "@/assets/thailand-scenic.jpg";
 
 const LandingPage = () => {
   const services = [
@@ -163,6 +164,155 @@ const LandingPage = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Going to Thailand Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Going to Thailand?
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8">
+                Everything you need to know for your journey to Thailand. From visa requirements to travel guides, we've got you covered.
+              </p>
+              
+              {/* Action Buttons Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <FileText className="mr-3 h-5 w-5" />
+                  Tourist Visa Requirements
+                </Button>
+                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <Users className="mr-3 h-5 w-5" />
+                  Business Visa Information
+                </Button>
+                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <Shield className="mr-3 h-5 w-5" />
+                  View COVID Rules
+                </Button>
+                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <ExternalLink className="mr-3 h-5 w-5" />
+                  Download Travel Guide
+                </Button>
+              </div>
+              
+              {/* Bottom Row - Smaller Buttons */}
+              <div className="grid grid-cols-3 gap-4 mt-4">
+                <Button variant="outline" className="h-12 text-sm">
+                  <Clock className="mr-2 h-4 w-4" />
+                  Processing Time
+                </Button>
+                <Button variant="outline" className="h-12 text-sm">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Visa Fees
+                </Button>
+                <Button variant="outline" className="h-12 text-sm">
+                  <CheckCircle className="mr-2 h-4 w-4" />
+                  Document Checklist
+                </Button>
+              </div>
+            </div>
+            
+            {/* Image */}
+            <div className="order-first lg:order-last">
+              <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+                <img 
+                  src={thailandScenic} 
+                  alt="Beautiful Thai temple and landscape" 
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News & Announcements Section */}
+      <section className="py-16 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">Latest Updates</h3>
+            <p className="text-muted-foreground">Stay informed with our latest news and announcements</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Announcements */}
+            <div>
+              <h4 className="text-xl font-semibold text-foreground mb-6 flex items-center">
+                <ExternalLink className="mr-2 h-5 w-5 text-primary" />
+                Official Announcements
+              </h4>
+              <div className="space-y-4">
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 15, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">New Visa Application Process</h5>
+                    <p className="text-sm text-muted-foreground mb-3">Updated procedures for tourist visa applications effective immediately.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Read more →</Button>
+                  </CardContent>
+                </Card>
+                
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 10, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">Holiday Schedule Update</h5>
+                    <p className="text-sm text-muted-foreground mb-3">Embassy closure dates for upcoming Thai holidays.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Read more →</Button>
+                  </CardContent>
+                </Card>
+                
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 5, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">Enhanced Security Measures</h5>
+                    <p className="text-sm text-muted-foreground mb-3">New security protocols for embassy visits.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Read more →</Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            {/* Embassy News */}
+            <div>
+              <h4 className="text-xl font-semibold text-foreground mb-6 flex items-center">
+                <FileText className="mr-2 h-5 w-5 text-primary" />
+                Embassy News
+              </h4>
+              <div className="space-y-4">
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 12, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">Thai Cultural Festival 2024</h5>
+                    <p className="text-sm text-muted-foreground mb-3">Join us for the annual Thai cultural celebration in Helsinki.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Learn more →</Button>
+                  </CardContent>
+                </Card>
+                
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 8, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">Trade Mission Success</h5>
+                    <p className="text-sm text-muted-foreground mb-3">Finnish-Thai business delegation strengthens bilateral relations.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Learn more →</Button>
+                  </CardContent>
+                </Card>
+                
+                <Card className="shadow-card hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-sm text-muted-foreground mb-2">March 3, 2024</div>
+                    <h5 className="font-semibold text-foreground mb-2">Student Exchange Program</h5>
+                    <p className="text-sm text-muted-foreground mb-3">New opportunities for Finnish students to study in Thailand.</p>
+                    <Button variant="link" className="p-0 h-auto text-primary">Learn more →</Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
