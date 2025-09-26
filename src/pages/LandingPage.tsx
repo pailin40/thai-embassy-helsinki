@@ -128,16 +128,61 @@ const LandingPage = () => {
 
                 <Card className="shadow-card">
                   <CardContent className="p-6">
-                    <h4 className="font-semibold text-foreground mb-4">Address</h4>
-                    <p className="text-muted-foreground mb-4">
-                      Bulevardi 31<br />
-                      00180 Helsinki<br />
-                      Finland
-                    </p>
-                    <Button variant="outline" size="sm">
+                    <h4 className="font-semibold text-foreground mb-4">Embassy Locations</h4>
+                    <div className="space-y-4">
+                      <div>
+                        <h5 className="font-medium text-foreground text-sm">Chancery</h5>
+                        <p className="text-muted-foreground text-sm">
+                          Lönnrotinkatu 7 B 12<br />
+                          00120 Helsinki
+                        </p>
+                        <p className="text-sm text-primary">Tel: +358 96 122 6400</p>
+                      </div>
+                      <div>
+                        <h5 className="font-medium text-foreground text-sm">Consular Services</h5>
+                        <p className="text-muted-foreground text-sm">
+                          Lönnrotin Puistikko 5 A 2<br />
+                          00120 Helsinki
+                        </p>
+                        <p className="text-sm text-primary">Tel: +358 96 122 6415</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm" className="mt-4 w-full">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View on Map
                     </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-foreground mb-4">Contact by Email</h4>
+                    <div className="space-y-3 text-sm">
+                      <div>
+                        <div className="font-medium text-foreground">Visa Information</div>
+                        <a href="mailto:visa@thaiembassy.fi" className="text-primary hover:underline">
+                          visa@thaiembassy.fi
+                        </a>
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">Consular Affairs</div>
+                        <a href="mailto:consular@thaiembassy.fi" className="text-primary hover:underline">
+                          consular@thaiembassy.fi
+                        </a>
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">ID & Passport</div>
+                        <a href="mailto:idpassport@thaiembassy.fi" className="text-primary hover:underline">
+                          idpassport@thaiembassy.fi
+                        </a>
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground">Chancery</div>
+                        <a href="mailto:chancery@thaiembassy.fi" className="text-primary hover:underline">
+                          chancery@thaiembassy.fi
+                        </a>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -327,7 +372,7 @@ const LandingPage = () => {
               For urgent matters outside office hours, Thai nationals can contact our emergency hotline.
             </p>
             <Button size="lg" className="bg-accent hover:bg-accent-hover">
-              Emergency Contact: +358 50 123 4567
+              Emergency Contact: +358 96 122 6400
             </Button>
           </div>
         </div>
