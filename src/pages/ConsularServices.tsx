@@ -243,9 +243,6 @@ const ConsularServices = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className="text-center pt-2">
-                    <p className="text-sm text-muted-foreground">Email required for appointment</p>
-                  </div>
                 </CardContent>
               </Card>
             ))}
