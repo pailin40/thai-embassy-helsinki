@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const VisaServices = () => {
   const visaTypes = [
@@ -165,13 +166,15 @@ const VisaServices = () => {
               </CardContent>
             </Card>
             
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <Calendar className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-foreground mb-2">Book Appointment</h3>
-                <p className="text-sm text-muted-foreground">Schedule your embassy visit</p>
-              </CardContent>
-            </Card>
+            <Link to="/consular-services">
+              <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+                <CardContent className="p-6 text-center">
+                  <Calendar className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-foreground mb-2">Book Appointment</h3>
+                  <p className="text-sm text-muted-foreground">Schedule your embassy visit</p>
+                </CardContent>
+              </Card>
+            </Link>
             
             <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
               <CardContent className="p-6 text-center">
@@ -372,7 +375,9 @@ const VisaServices = () => {
             Our consular staff is available to help with your visa application during office hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button>Book Appointment</Button>
+            <Link to="/consular-services">
+              <Button>Book Appointment</Button>
+            </Link>
             <Button variant="outline">Call Embassy</Button>
           </div>
         </section>

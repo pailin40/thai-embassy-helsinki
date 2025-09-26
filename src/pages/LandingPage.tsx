@@ -56,13 +56,17 @@ const LandingPage = () => {
               for Finnish residents and international travelers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground">
-                Apply for Visa
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Book Appointment
-              </Button>
+              <Link to="/visa-services">
+                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground">
+                  Apply for Visa
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/consular-services">
+                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Book Appointment
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
