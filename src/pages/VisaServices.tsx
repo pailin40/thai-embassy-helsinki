@@ -1,7 +1,8 @@
-import { FileText, Clock, CreditCard, CheckCircle, AlertCircle, Download } from "lucide-react";
+import { FileText, Clock, CreditCard, CheckCircle, AlertCircle, Download, Phone, Calendar, HelpCircle, Search, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const VisaServices = () => {
   const visaTypes = [
@@ -46,28 +47,67 @@ const VisaServices = () => {
   const processSteps = [
     {
       step: 1,
-      title: "Prepare Documents",
-      description: "Gather all required documents according to your visa type"
+      title: "Check Visa Requirements",
+      description: "Check the visa requirements from the Embassy's website",
+      link: "https://thaievisa.go.th/static/English-Manual.pdf",
+      linkText: "E-visa user manual in English"
     },
     {
       step: 2,
-      title: "Complete Application",
-      description: "Fill out the visa application form completely and accurately"
+      title: "Submit Online Application",
+      description: "Submit visa application form online (all visas must be submitted here)",
+      link: "https://thaievisa.go.th",
+      linkText: "Apply at thaievisa.go.th"
     },
     {
       step: 3,
-      title: "Submit Application",
-      description: "Visit the embassy during visa hours (9:00-11:30) or book appointment"
+      title: "Timing Guidelines",
+      description: "Apply 4-8 weeks before travel date. Do NOT submit more than 3 months before departure"
     },
     {
       step: 4,
-      title: "Pay Fees",
-      description: "Pay visa fee in cash or by card at the embassy"
+      title: "Provide Genuine Documents",
+      description: "Provide authentic documents and information. False documents will result in rejection and travel prohibition"
     },
     {
       step: 5,
-      title: "Collect Visa",
-      description: "Return to collect your passport with visa or use courier service"
+      title: "Processing & Collection",
+      description: "7 working days processing time. You'll receive email approval when visa is granted"
+    }
+  ];
+
+  const importantNotices = [
+    "The Royal Thai Embassy Helsinki processes visas only when applicant is physically in Finland/Estonia",
+    "Processing time is 7 working days for completed documents (may take longer in certain cases)",
+    "Applicants receive e-mail approval once visa is granted",
+    "Embassy reserves right to request additional documents/interview and reject applications",
+    "For inquiries: visa@thaiembassy.fi"
+  ];
+
+  const faqItems = [
+    {
+      question: "How long does visa processing take?",
+      answer: "Standard processing time is 7 working days from when we receive complete documents. Processing may take longer in certain cases or during peak seasons."
+    },
+    {
+      question: "Can I apply if I'm not in Finland?",
+      answer: "No, the Royal Thai Embassy Helsinki only processes visa applications when the applicant is physically present in Finland or Estonia."
+    },
+    {
+      question: "When should I apply for my visa?",
+      answer: "We recommend applying 4-8 weeks before your travel date. Do not submit your application more than 3 months before your departure date."
+    },
+    {
+      question: "What happens if I submit false documents?",
+      answer: "Applications with false documents or information will be rejected and reported. This may result in future prohibition from entering Thailand."
+    },
+    {
+      question: "How will I know when my visa is approved?",
+      answer: "You will receive an email notification once your visa is granted. The embassy will contact you for document collection."
+    },
+    {
+      question: "Can the embassy reject my application?",
+      answer: "Yes, the embassy reserves the right to reject any application without prejudice and may request additional documents or an in-person interview."
     }
   ];
 
@@ -90,16 +130,66 @@ const VisaServices = () => {
               <div className="flex items-start space-x-4">
                 <AlertCircle className="h-6 w-6 text-accent mt-1" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">Important Notice</h3>
-                  <p className="text-muted-foreground">
-                    Visa processing times may vary during peak seasons. Please apply well in advance of your travel date. 
-                    All fees are non-refundable regardless of visa approval status.
-                  </p>
+                  <h3 className="font-semibold text-foreground mb-4">Important Processing Information</h3>
+                  <ul className="space-y-3">
+                    {importantNotices.map((notice, index) => (
+                      <li key={index} className="flex items-start space-x-2 text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                        <span>{notice}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
+
+        {/* Quick Actions */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Visa Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+              <CardContent className="p-6 text-center">
+                <Download className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-foreground mb-2">Download Forms</h3>
+                <p className="text-sm text-muted-foreground">Get application forms and checklists</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+              <CardContent className="p-6 text-center">
+                <Search className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-foreground mb-2">Check Visa Type</h3>
+                <p className="text-sm text-muted-foreground">Find the right visa for your trip</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+              <CardContent className="p-6 text-center">
+                <Calendar className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-foreground mb-2">Book Appointment</h3>
+                <p className="text-sm text-muted-foreground">Schedule your embassy visit</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+              <CardContent className="p-6 text-center">
+                <Phone className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-foreground mb-2">Contact Support</h3>
+                <p className="text-sm text-muted-foreground">Get help with your application</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+              <CardContent className="p-6 text-center">
+                <HelpCircle className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-foreground mb-2">FAQ</h3>
+                <p className="text-sm text-muted-foreground">Common questions answered</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
         {/* Visa Types */}
         <section className="mb-16">
@@ -142,7 +232,12 @@ const VisaServices = () => {
                       ))}
                     </ul>
                   </div>
-                  <Button className="w-full">Apply Now</Button>
+                  <Button 
+                    className="w-full" 
+                    onClick={() => window.open('https://thaievisa.go.th', '_blank')}
+                  >
+                    Apply Now
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -151,7 +246,7 @@ const VisaServices = () => {
 
         {/* Application Process */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Application Process</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Step-by-Step Application Process</h2>
           <div className="grid md:grid-cols-5 gap-6">
             {processSteps.map((step, index) => (
               <Card key={index} className="text-center shadow-card">
@@ -160,7 +255,18 @@ const VisaServices = () => {
                     <span className="text-primary-foreground font-bold">{step.step}</span>
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
+                  {step.link && (
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="w-full"
+                      onClick={() => window.open(step.link, '_blank')}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      {step.linkText}
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -236,6 +342,27 @@ const VisaServices = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Frequently Asked Questions</h2>
+          <Card className="shadow-card">
+            <CardContent className="p-6">
+              <Accordion type="single" collapsible className="w-full">
+                {faqItems.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Contact for Assistance */}
