@@ -4,8 +4,15 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Deploy Status](https://github.com/pailin40/thai-embassy-helsinki/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/pailin40/thai-embassy-helsinki/actions)
 
 A modern, responsive redesign of the Royal Thai Embassy in Helsinki website, featuring improved user experience, accessibility, and contemporary design principles.
+
+## 🌐 Live Demo
+
+**[Visit the Live Site](https://pailin40.github.io/thai-embassy-helsinki/)**
+
+> The site is automatically deployed to GitHub Pages whenever changes are pushed to the main branch.
 
 ## 🌟 Features
 
@@ -16,6 +23,7 @@ A modern, responsive redesign of the Royal Thai Embassy in Helsinki website, fea
 - **Component-Based**: Reusable UI components using shadcn/ui library
 - **TypeScript**: Full type safety throughout the application
 - **Dark Mode Support**: Toggle between light and dark themes
+- **Automatic Deployment**: CI/CD pipeline with GitHub Actions
 
 ## 🛠️ Technology Stack
 
@@ -36,6 +44,7 @@ A modern, responsive redesign of the Royal Thai Embassy in Helsinki website, fea
 - **ESLint** - Code linting and quality assurance
 - **PostCSS** - CSS processing and optimization
 - **Autoprefixer** - Automatic CSS vendor prefixing
+- **GitHub Actions** - Automated deployment pipeline
 
 ## 🚀 Getting Started
 
@@ -117,22 +126,25 @@ The website is fully responsive and optimized for:
 - Screen reader compatibility
 - Focus management
 
-## 🌐 Deployment
+## 🚀 Deployment
 
-The project can be deployed to various platforms:
+This project uses **automated deployment** with GitHub Actions:
 
-### Vercel (Recommended)
+### Automatic Deployment (Current Setup)
+- Every push to the `main` branch triggers automatic deployment
+- Built with Vite and deployed to GitHub Pages
+- Live site: **https://pailin40.github.io/thai-embassy-helsinki/**
+
+### Manual Deployment Options
+
+#### Vercel
 1. Connect your GitHub repository to Vercel
 2. Vercel will automatically detect the Vite configuration
 3. Deploy with zero configuration
 
-### Netlify
+#### Netlify
 1. Build the project: `npm run build`
 2. Deploy the `dist` folder to Netlify
-
-### GitHub Pages
-1. Configure the build output for GitHub Pages
-2. Use GitHub Actions for automatic deployment
 
 ## 🤝 Contributing
 
@@ -145,6 +157,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 3. Add appropriate TypeScript types
 4. Test your changes across different devices
 5. Ensure accessibility standards are maintained
+6. The deployment workflow will automatically deploy your changes when merged to main
 
 ## 📄 License
 
@@ -156,6 +169,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Project Link: [https://github.com/pailin40/thai-embassy-helsinki](https://github.com/pailin40/thai-embassy-helsinki)
 
+Live Demo: [https://pailin40.github.io/thai-embassy-helsinki/](https://pailin40.github.io/thai-embassy-helsinki/)
+
 ---
 
 ## 🙏 Acknowledgments
@@ -165,6 +180,7 @@ Project Link: [https://github.com/pailin40/thai-embassy-helsinki](https://github
 - Radix UI for accessible component primitives
 - Tailwind CSS for the utility-first approach
 - Vite team for the amazing build tool
+- GitHub Pages for free hosting
 
 ---
 
