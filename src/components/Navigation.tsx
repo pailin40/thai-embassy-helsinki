@@ -102,14 +102,14 @@ const Navigation = () => {
                     isServiceActive() && "text-primary after:scale-x-100"
                   )}>Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[280px] gap-1 p-2">
+                    <div className="grid w-[280px] gap-1 p-2 bg-popover border border-border shadow-lg">
                       {servicesItems.map((item) => (
                         <NavigationMenuLink key={item.path} asChild>
                           <Link 
                             to={item.path}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground bg-popover text-popover-foreground"
                           >
-                            <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
+                            <div className="text-sm font-medium leading-none">{item.name}</div>
                           </Link>
                         </NavigationMenuLink>
                       ))}
@@ -124,14 +124,14 @@ const Navigation = () => {
                     isAboutActive() && "text-primary after:scale-x-100"
                   )}>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[280px] gap-1 p-2">
+                    <div className="grid w-[280px] gap-1 p-2 bg-popover border border-border shadow-lg">
                       {aboutItems.map((item) => (
                         <NavigationMenuLink key={item.path} asChild>
                           <Link 
                             to={item.path}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground bg-popover text-popover-foreground"
                           >
-                            <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
+                            <div className="text-sm font-medium leading-none">{item.name}</div>
                           </Link>
                         </NavigationMenuLink>
                       ))}
