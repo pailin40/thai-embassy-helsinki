@@ -243,19 +243,15 @@ const LandingPage = () => {
                 </Button>
               </div>
               
-              {/* Bottom Row - Smaller Buttons */}
-              <div className="grid grid-cols-3 gap-4 mt-4">
+              {/* Second Row - Same Style */}
+              <div className="grid grid-cols-2 gap-4 mt-4">
                 <Button size="lg" className="h-12 text-sm text-left justify-start hover:bg-red-500">
                   <Clock className="mr-2 h-4 w-4" />
                   Processing Time
                 </Button>
                 <Button size="lg" className="h-12 text-sm text-left justify-start hover:bg-red-500">
-                  <FileText className="mr-2 h-4 w-4" />
-                  Visa Fees
-                </Button>
-                <Button size="lg" className="h-12 text-sm text-left justify-start hover:bg-red-500">
-                  <CheckCircle className="mr-2 h-4 w-4" />
-                  Document Checklist
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Download Travel Guide
                 </Button>
               </div>
             </div>
