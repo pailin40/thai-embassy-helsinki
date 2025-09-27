@@ -96,8 +96,8 @@ const Navigation = () => {
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(
-                    "font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100 focus:bg-transparent active:bg-transparent data-[active]:bg-transparent",
-                    isServiceActive() ? "text-primary after:scale-x-100" : "after:scale-x-0"
+                    "font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-left after:transition-transform after:duration-300 after:scale-x-0 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100 data-[state=open]:text-primary focus:bg-transparent active:bg-transparent data-[active]:bg-transparent",
+                    isServiceActive() && "text-primary after:scale-x-100"
                   )}>Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
@@ -118,8 +118,8 @@ const Navigation = () => {
                 {/* About Dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(
-                    "font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100 focus:bg-transparent active:bg-transparent data-[active]:bg-transparent",
-                    isAboutActive() ? "text-primary after:scale-x-100" : "after:scale-x-0"
+                    "font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-left after:transition-transform after:duration-300 after:scale-x-0 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100 data-[state=open]:text-primary focus:bg-transparent active:bg-transparent data-[active]:bg-transparent",
+                    isAboutActive() && "text-primary after:scale-x-100"
                   )}>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
