@@ -107,7 +107,7 @@ const Navigation = () => {
                         <NavigationMenuLink key={item.path} asChild>
                           <Link 
                             to={item.path}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground bg-popover text-popover-foreground"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-muted-foreground bg-popover text-popover-foreground"
                           >
                             <div className="text-sm font-medium leading-none">{item.name}</div>
                           </Link>
@@ -129,7 +129,7 @@ const Navigation = () => {
                         <NavigationMenuLink key={item.path} asChild>
                           <Link 
                             to={item.path}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground bg-popover text-popover-foreground"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-muted-foreground bg-popover text-popover-foreground"
                           >
                             <div className="text-sm font-medium leading-none">{item.name}</div>
                           </Link>
