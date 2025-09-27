@@ -77,8 +77,8 @@ const Navigation = () => {
                   <Link
                     to="/"
                     className={cn(
-                      "font-medium transition-colors hover:text-primary px-3 py-2",
-                      isActive("/") ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"
+                      "font-medium transition-colors hover:text-foreground px-3 py-2 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300",
+                      isActive("/") ? "text-primary after:scale-x-100" : "text-foreground after:scale-x-0 hover:after:scale-x-100 hover:after:origin-bottom-left"
                     )}
                   >
                     Home
@@ -87,16 +87,13 @@ const Navigation = () => {
 
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="font-medium">Services</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid w-[280px] gap-1 p-2">
                       {servicesItems.map((item) => (
                         <Link key={item.path} to={item.path}>
-                          <div className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
+                          <div className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50">
+                            <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
                           </div>
                         </Link>
                       ))}
@@ -106,16 +103,13 @@ const Navigation = () => {
 
                 {/* About Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="font-medium">About</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid w-[280px] gap-1 p-2">
                       {aboutItems.map((item) => (
                         <Link key={item.path} to={item.path}>
-                          <div className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
+                          <div className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50">
+                            <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
                           </div>
                         </Link>
                       ))}
@@ -128,8 +122,8 @@ const Navigation = () => {
                   <Link
                     to="/contact"
                     className={cn(
-                      "font-medium transition-colors hover:text-primary px-3 py-2",
-                      isActive("/contact") ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"
+                      "font-medium transition-colors hover:text-foreground px-3 py-2 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300",
+                      isActive("/contact") ? "text-primary after:scale-x-100" : "text-foreground after:scale-x-0 hover:after:scale-x-100 hover:after:origin-bottom-left"
                     )}
                   >
                     Contact
