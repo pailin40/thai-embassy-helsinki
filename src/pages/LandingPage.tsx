@@ -63,7 +63,7 @@ const LandingPage = () => {
                 </Button>
               </Link>
               <Link to="/consular-services">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   Book Appointment
                 </Button>
               </Link>
