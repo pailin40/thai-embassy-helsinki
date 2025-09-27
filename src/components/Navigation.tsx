@@ -102,11 +102,14 @@ const Navigation = () => {
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
                       {servicesItems.map((item) => (
-                        <Link key={item.path} to={item.path}>
-                          <div className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50">
+                        <NavigationMenuLink key={item.path} asChild>
+                          <Link 
+                            to={item.path}
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50"
+                          >
                             <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
-                          </div>
-                        </Link>
+                          </Link>
+                        </NavigationMenuLink>
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -121,11 +124,14 @@ const Navigation = () => {
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
                       {aboutItems.map((item) => (
-                        <Link key={item.path} to={item.path}>
-                          <div className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50">
+                        <NavigationMenuLink key={item.path} asChild>
+                          <Link 
+                            to={item.path}
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/50"
+                          >
                             <div className="text-sm font-medium leading-none text-foreground">{item.name}</div>
-                          </div>
-                        </Link>
+                          </Link>
+                        </NavigationMenuLink>
                       ))}
                     </div>
                   </NavigationMenuContent>
