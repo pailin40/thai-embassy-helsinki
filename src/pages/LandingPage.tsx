@@ -255,15 +255,15 @@ const LandingPage = () => {
               
               {/* Bottom Row - Smaller Buttons */}
               <div className="grid grid-cols-3 gap-4 mt-4">
-                <Button variant="outline" className="h-12 text-sm">
+                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
                   <Clock className="mr-2 h-4 w-4" />
                   Processing Time
                 </Button>
-                <Button variant="outline" className="h-12 text-sm">
+                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
                   <FileText className="mr-2 h-4 w-4" />
                   Visa Fees
                 </Button>
-                <Button variant="outline" className="h-12 text-sm">
+                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
                   <CheckCircle className="mr-2 h-4 w-4" />
                   Document Checklist
                 </Button>
