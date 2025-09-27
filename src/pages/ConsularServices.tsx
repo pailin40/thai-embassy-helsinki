@@ -343,11 +343,11 @@ const ConsularServices = () => {
                     <step.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                   
                   {/* Notes that appear on hover */}
-                  <div className="overflow-hidden transition-all duration-500 ease-in-out max-h-0 group-hover:max-h-48">
-                    <div className="text-left bg-secondary/30 p-3 rounded-lg mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <div className="overflow-hidden transition-all duration-500 ease-in-out max-h-0 group-hover:max-h-48 group-hover:mt-4">
+                    <div className="text-left bg-secondary/30 p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                       <div className="space-y-1">
                         {step.notes.map((note, noteIndex) => (
                           <p key={noteIndex} className="text-xs text-muted-foreground">{note}</p>
