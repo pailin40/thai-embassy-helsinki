@@ -335,9 +335,9 @@ const ConsularServices = () => {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Complete Application Process</h2>
           
           {/* Service Guide Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 items-start">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" style={{alignItems: 'flex-start'}}>
             {serviceGuideSteps.map((step, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer group h-fit">
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <step.icon className="h-8 w-8 text-primary" />
