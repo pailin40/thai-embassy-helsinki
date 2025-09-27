@@ -109,37 +109,79 @@ const ConsularServices = () => {
     {
       icon: CheckCircle,
       title: "Eligibility check",
-      description: "Verify if you meet the requirements for the consular service"
+      description: "Verify if you meet the requirements for the consular service",
+      notes: [
+        "• Thai citizenship required for passport services",
+        "• Valid ID or passport needed",
+        "• Check document expiry dates",
+        "• Verify residency status if applicable"
+      ]
     },
     {
       icon: FileText,
       title: "Required documents",
-      description: "Prepare all necessary documents and forms"
+      description: "Prepare all necessary documents and forms",
+      notes: [
+        "• Download forms from embassy website",
+        "• Original + photocopies required",
+        "• Passport photos (recent, white background)",
+        "• Finnish translations if needed"
+      ]
     },
     {
       icon: Send,
       title: "Submission process",
-      description: "Submit your documents via email or in-person appointment"
+      description: "Submit your documents via email or in-person appointment",
+      notes: [
+        "• Email copies first for pre-approval",
+        "• Include legalization form with passport copy",
+        "• Wait for embassy approval before visit",
+        "• Bring originals to appointment"
+      ]
     },
     {
       icon: MapPin,
       title: "Visit requirements",
-      description: "Understand what to expect during your embassy visit"
+      description: "Understand what to expect during your embassy visit",
+      notes: [
+        "• Arrive 10 minutes early",
+        "• Bring all original documents",
+        "• Valid ID required for entry",
+        "• No large bags or electronics allowed"
+      ]
     },
     {
       icon: CreditCard,
       title: "Fees and payment",
-      description: "Learn about service fees and payment methods"
+      description: "Learn about service fees and payment methods",
+      notes: [
+        "• Cash (Euros) or major cards accepted",
+        "• Payment required at service time",
+        "• No refunds for cancelled applications",
+        "• Check current fee schedule online"
+      ]
     },
     {
       icon: Clock,
       title: "Processing time",
-      description: "Know how long your application will take to process"
+      description: "Know how long your application will take to process",
+      notes: [
+        "• Passport: 4-6 weeks standard",
+        "• Document auth: 3-5 working days",
+        "• Emergency services: same day possible",
+        "• Delays possible during peak seasons"
+      ]
     },
     {
       icon: Mail,
       title: "How you receive your result",
-      description: "Understand how and when you'll receive your processed documents"
+      description: "Understand how and when you'll receive your processed documents",
+      notes: [
+        "• Email notification when ready",
+        "• Collection by appointment only",
+        "• ID required for document pickup",
+        "• Authorized representative needs written permission"
+      ]
     }
   ];
 
@@ -295,13 +337,25 @@ const ConsularServices = () => {
           {/* Service Guide Steps */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {serviceGuideSteps.map((step, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer hover-scale">
-                <CardContent className="p-6 text-center">
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer group">
+                <CardContent className="p-6 text-center group-hover:pb-8">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <step.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
+                  
+                  {/* Notes that appear on hover */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-32 overflow-hidden transition-all">
+                    <div className="text-left bg-secondary/30 p-3 rounded-lg mt-2">
+                      <p className="text-xs font-medium text-foreground mb-2">Quick Notes:</p>
+                      <div className="space-y-1">
+                        {step.notes.map((note, noteIndex) => (
+                          <p key={noteIndex} className="text-xs text-muted-foreground">{note}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
