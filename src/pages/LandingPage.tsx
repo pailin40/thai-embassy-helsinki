@@ -232,17 +232,11 @@ const LandingPage = () => {
               </p>
               
               {/* Action Buttons Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Link to="/visit-thailand">
                   <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
                     <FileText className="mr-3 h-5 w-5" />
                     Tourist Visa Requirements
-                  </Button>
-                </Link>
-                <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
-                    <Users className="mr-3 h-5 w-5" />
-                    Business Visa Information
                   </Button>
                 </Link>
                 <Link to="/visit-thailand">
