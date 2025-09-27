@@ -335,10 +335,10 @@ const ConsularServices = () => {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Complete Application Process</h2>
           
           {/* Service Guide Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 items-start">
             {serviceGuideSteps.map((step, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6 text-center group-hover:pb-8">
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 cursor-pointer group h-fit">
+                <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <step.icon className="h-8 w-8 text-primary" />
                   </div>
@@ -346,9 +346,8 @@ const ConsularServices = () => {
                   <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
                   
                   {/* Notes that appear on hover */}
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-32 overflow-hidden transition-all">
-                    <div className="text-left bg-secondary/30 p-3 rounded-lg mt-2">
-                      <p className="text-xs font-medium text-foreground mb-2">Quick Notes:</p>
+                  <div className="overflow-hidden transition-all duration-500 ease-in-out max-h-0 group-hover:max-h-48">
+                    <div className="text-left bg-secondary/30 p-3 rounded-lg mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                       <div className="space-y-1">
                         {step.notes.map((note, noteIndex) => (
                           <p key={noteIndex} className="text-xs text-muted-foreground">{note}</p>
