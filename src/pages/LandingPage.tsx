@@ -234,19 +234,19 @@ const LandingPage = () => {
               {/* Action Buttons Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <Button size="lg" variant="outline" className="w-full h-14 text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                     <FileText className="mr-3 h-5 w-5" />
                     Tourist Visa Requirements
                   </Button>
                 </Link>
                 <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <Button size="lg" variant="outline" className="w-full h-14 text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                     <Shield className="mr-3 h-5 w-5" />
                     View COVID Rules
                   </Button>
                 </Link>
                 <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                  <Button size="lg" variant="outline" className="w-full h-14 text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                     <ExternalLink className="mr-3 h-5 w-5" />
                     Download Travel Guide
                   </Button>
@@ -255,15 +255,15 @@ const LandingPage = () => {
               
               {/* Bottom Row - Smaller Buttons */}
               <div className="grid grid-cols-3 gap-4 mt-4">
-                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                <Button size="lg" variant="outline" className="h-12 text-sm text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                   <Clock className="mr-2 h-4 w-4" />
                   Processing Time
                 </Button>
-                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                <Button size="lg" variant="outline" className="h-12 text-sm text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                   <FileText className="mr-2 h-4 w-4" />
                   Visa Fees
                 </Button>
-                <Button size="lg" className="h-12 text-sm text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                <Button size="lg" variant="outline" className="h-12 text-sm text-left justify-start hover:bg-red-500 hover:text-white hover:border-red-500">
                   <CheckCircle className="mr-2 h-4 w-4" />
                   Document Checklist
                 </Button>
