@@ -87,7 +87,7 @@ const Navigation = () => {
 
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100">Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
                       {servicesItems.map((item) => (
@@ -103,7 +103,7 @@ const Navigation = () => {
 
                 {/* About Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="font-medium relative hover:text-foreground after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:after:scale-x-100">About</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[280px] gap-1 p-2">
                       {aboutItems.map((item) => (
