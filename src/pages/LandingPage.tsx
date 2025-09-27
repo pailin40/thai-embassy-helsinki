@@ -233,22 +233,30 @@ const LandingPage = () => {
               
               {/* Action Buttons Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
-                  <FileText className="mr-3 h-5 w-5" />
-                  Tourist Visa Requirements
-                </Button>
-                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
-                  <Users className="mr-3 h-5 w-5" />
-                  Business Visa Information
-                </Button>
-                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
-                  <Shield className="mr-3 h-5 w-5" />
-                  View COVID Rules
-                </Button>
-                <Button size="lg" className="h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
-                  <ExternalLink className="mr-3 h-5 w-5" />
-                  Download Travel Guide
-                </Button>
+                <Link to="/visit-thailand">
+                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                    <FileText className="mr-3 h-5 w-5" />
+                    Tourist Visa Requirements
+                  </Button>
+                </Link>
+                <Link to="/visit-thailand">
+                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                    <Users className="mr-3 h-5 w-5" />
+                    Business Visa Information
+                  </Button>
+                </Link>
+                <Link to="/visit-thailand">
+                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                    <Shield className="mr-3 h-5 w-5" />
+                    View COVID Rules
+                  </Button>
+                </Link>
+                <Link to="/visit-thailand">
+                  <Button size="lg" className="w-full h-14 text-left justify-start bg-card hover:bg-card/80 text-foreground border shadow-sm">
+                    <ExternalLink className="mr-3 h-5 w-5" />
+                    Download Travel Guide
+                  </Button>
+                </Link>
               </div>
               
               {/* Bottom Row - Smaller Buttons */}

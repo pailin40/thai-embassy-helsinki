@@ -7,6 +7,9 @@ import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import VisaServices from "./pages/VisaServices";
 import ConsularServices from "./pages/ConsularServices";
+import BusinessServices from "./pages/BusinessServices";
+import AboutEmbassy from "./pages/AboutEmbassy";
+import VisitThailand from "./pages/VisitThailand";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +26,9 @@ const App = () => (
             <Route index element={<LandingPage />} />
             <Route path="visa-services" element={<VisaServices />} />
             <Route path="consular-services" element={<ConsularServices />} />
+            <Route path="business-services" element={<BusinessServices />} />
+            <Route path="about-embassy" element={<AboutEmbassy />} />
+            <Route path="visit-thailand" element={<VisitThailand />} />
             <Route path="contact" element={<Contact />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

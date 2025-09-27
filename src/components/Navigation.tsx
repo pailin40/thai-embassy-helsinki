@@ -1,17 +1,30 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Visa Services", path: "/visa-services" },
-    { name: "Consular Services", path: "/consular-services" },
-    { name: "Contact", path: "/contact" },
+  const servicesItems = [
+    { name: "Visa Services", path: "/visa-services", description: "Tourist and business visa applications" },
+    { name: "Consular Services", path: "/consular-services", description: "Passport renewals and citizen services" },
+    { name: "Business Services", path: "/business-services", description: "Trade promotion and investment support" },
+  ];
+
+  const aboutItems = [
+    { name: "About Embassy", path: "/about-embassy", description: "Our mission, history and staff" },
+    { name: "Visit Thailand", path: "/visit-thailand", description: "Travel guides and cultural information" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -57,17 +70,74 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <NavigationMenu>
+              <NavigationMenuList>
+                {/* Home Link */}
+                <NavigationMenuItem>
+                  <Link
+                    to="/"
+                    className={cn(
+                      "font-medium transition-colors hover:text-primary px-3 py-2",
+                      isActive("/") ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"
+                    )}
+                  >
+                    Home
+                  </Link>
+                </NavigationMenuItem>
+
+                {/* Services Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="font-medium">Services</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4">
+                      {servicesItems.map((item) => (
+                        <Link key={item.path} to={item.path}>
+                          <div className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">{item.name}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {item.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* About Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="font-medium">About</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4">
+                      {aboutItems.map((item) => (
+                        <Link key={item.path} to={item.path}>
+                          <div className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">{item.name}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {item.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Contact Link */}
+                <NavigationMenuItem>
+                  <Link
+                    to="/contact"
+                    className={cn(
+                      "font-medium transition-colors hover:text-primary px-3 py-2",
+                      isActive("/contact") ? "text-primary border-b-2 border-primary pb-1" : "text-foreground"
+                    )}
+                  >
+                    Contact
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
             <Button className="bg-accent hover:bg-accent-hover">
               Emergency Contact
             </Button>
@@ -90,11 +160,26 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden border-t border-border bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+              {/* Home */}
+              <Link
+                to="/"
+                className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                  isActive("/") ? "bg-primary text-primary-foreground" : "text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+
+              {/* Services */}
+              <div className="px-3 py-1">
+                <p className="text-sm font-semibold text-muted-foreground">Services</p>
+              </div>
+              {servicesItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                  className={`block px-6 py-2 rounded-md font-medium transition-colors ${
                     isActive(item.path)
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-muted"
@@ -104,6 +189,37 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+
+              {/* About */}
+              <div className="px-3 py-1 mt-4">
+                <p className="text-sm font-semibold text-muted-foreground">About</p>
+              </div>
+              {aboutItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`block px-6 py-2 rounded-md font-medium transition-colors ${
+                    isActive(item.path)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground hover:bg-muted"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Contact */}
+              <Link
+                to="/contact"
+                className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                  isActive("/contact") ? "bg-primary text-primary-foreground" : "text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+
               <div className="px-3 py-2">
                 <Button className="w-full bg-accent hover:bg-accent-hover">
                   Emergency Contact
