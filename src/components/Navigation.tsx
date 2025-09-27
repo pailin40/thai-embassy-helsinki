@@ -27,14 +27,16 @@ const Navigation = () => {
     { name: "Visit Thailand", path: "/visit-thailand", description: "Travel guides and cultural information" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path || location.pathname === `${path}/`;
   
   const isServiceActive = () => {
-    return ['/visa-services', '/consular-services', '/business-services'].includes(location.pathname);
+    const p = location.pathname.toLowerCase();
+    return p.startsWith('/visa-services') || p.startsWith('/consular-services') || p.startsWith('/business-services');
   };
   
   const isAboutActive = () => {
-    return ['/about-embassy', '/visit-thailand'].includes(location.pathname);
+    const p = location.pathname.toLowerCase();
+    return p.startsWith('/about-embassy') || p.startsWith('/visit-thailand');
   };
 
   return (
