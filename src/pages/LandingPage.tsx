@@ -232,25 +232,15 @@ const LandingPage = () => {
               </p>
               
               {/* Action Buttons Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start hover:bg-red-500">
-                    <FileText className="mr-3 h-5 w-5" />
-                    Tourist Visa Requirements
-                  </Button>
-                </Link>
-                <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start hover:bg-red-500">
-                    <Shield className="mr-3 h-5 w-5" />
-                    View COVID Rules
-                  </Button>
-                </Link>
-                <Link to="/visit-thailand">
-                  <Button size="lg" className="w-full h-14 text-left justify-start hover:bg-red-500">
-                    <ExternalLink className="mr-3 h-5 w-5" />
-                    Download Travel Guide
-                  </Button>
-                </Link>
+              <div className="grid grid-cols-2 gap-4">
+                <Button size="lg" className="h-12 text-sm text-left justify-start hover:bg-red-500">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Tourist Visa Requirements
+                </Button>
+                <Button size="lg" className="h-12 text-sm text-left justify-start hover:bg-red-500">
+                  <Shield className="mr-2 h-4 w-4" />
+                  View COVID Rules
+                </Button>
               </div>
               
               {/* Bottom Row - Smaller Buttons */}
