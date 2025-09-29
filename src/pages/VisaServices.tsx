@@ -82,7 +82,7 @@ const VisaServices = () => {
       title: "Check Visa Requirements",
       description: "Check the visa requirements from the Embassy's website",
       link: "https://youtu.be/k85mRPqvMbE?si=Ads2mG28CNJB9Dll",
-      linkText: "E-visa user manual in English",
+      linkText: "Click Here",
     },
     {
       step: 2,
@@ -90,7 +90,7 @@ const VisaServices = () => {
       description:
         "Submit visa application form online (all visas must be submitted here)",
       link: "https://youtu.be/k85mRPqvMbE?si=Ads2mG28CNJB9Dll",
-      linkText: "Apply at thaievisa.go.th",
+      linkText: "Click Here",
     },
     {
       step: 3,
@@ -117,7 +117,7 @@ const VisaServices = () => {
     "Processing time is 7 working days for completed documents (may take longer in certain cases)",
     "Applicants receive e-mail approval once visa is granted",
     "Embassy reserves right to request additional documents/interview and reject applications",
-    "For inquiries: visa@thaiembassy.fi",
+    "For inquiries: visa@tembassy.fi",
   ];
 
   const faqItems = [
@@ -201,7 +201,7 @@ const VisaServices = () => {
             Visa Services
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+            <Card className="shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
               <CardContent className="p-6 text-center">
                 <Download className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">
@@ -213,7 +213,7 @@ const VisaServices = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+            <Card className="shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
               <CardContent className="p-6 text-center">
                 <Search className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">
@@ -225,7 +225,7 @@ const VisaServices = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+            <Card className="shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
               <CardContent className="p-6 text-center">
                 <Calendar className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">
@@ -237,7 +237,7 @@ const VisaServices = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+            <Card className="shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
               <CardContent className="p-6 text-center">
                 <Phone className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">
@@ -249,7 +249,7 @@ const VisaServices = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-all cursor-pointer group">
+            <Card className="shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group">
               <CardContent className="p-6 text-center">
                 <HelpCircle className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">FAQ</h3>
