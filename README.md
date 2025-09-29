@@ -1,73 +1,187 @@
-# Welcome to your Lovable project
+# Royal Thai Embassy Helsinki - Website Redesign
 
-## Project info
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Deploy Status](https://github.com/pailin40/thai-embassy-helsinki/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/pailin40/thai-embassy-helsinki/actions)
 
-**URL**: https://lovable.dev/projects/e2985bbe-6b31-4eca-9fd2-85df135b8821
+A modern, responsive redesign of the Royal Thai Embassy in Helsinki website, featuring improved user experience, accessibility, and contemporary design principles.
 
-## How can I edit this code?
+## 🌐 Live Demo
 
-There are several ways of editing your application.
+**[Visit the Live Site](https://pailin40.github.io/thai-embassy-helsinki/)**
 
-**Use Lovable**
+> The site is automatically deployed to GitHub Pages whenever changes are pushed to the main branch.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e2985bbe-6b31-4eca-9fd2-85df135b8821) and start prompting.
+## 🌟 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Modern UI/UX Design**: Clean, professional interface with improved navigation
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Accessibility First**: WCAG compliant design with proper semantic HTML
+- **Fast Performance**: Built with Vite for lightning-fast development and production builds
+- **Component-Based**: Reusable UI components using shadcn/ui library
+- **TypeScript**: Full type safety throughout the application
+- **Dark Mode Support**: Toggle between light and dark themes
+- **Automatic Deployment**: CI/CD pipeline with GitHub Actions
 
-**Use your preferred IDE**
+## 🛠️ Technology Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Frontend
+- **React 18** - Modern React with hooks and concurrent features
+- **TypeScript** - Type-safe JavaScript for better development experience
+- **Vite** - Next-generation frontend build tool
+- **React Router DOM** - Client-side routing
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React components
+- **Radix UI** - Unstyled, accessible components
+- **Lucide React** - Beautiful icon library
+- **next-themes** - Theme switching functionality
 
-Follow these steps:
+### Development Tools
+- **ESLint** - Code linting and quality assurance
+- **PostCSS** - CSS processing and optimization
+- **Autoprefixer** - Automatic CSS vendor prefixing
+- **GitHub Actions** - Automated deployment pipeline
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Node.js (version 16.0 or higher)
+- npm or yarn package manager
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pailin40/thai-embassy-helsinki.git
+   cd thai-embassy-helsinki
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
+
+## 📁 Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Application pages/routes
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions and configurations
+├── assets/        # Static assets (images, icons, etc.)
+├── App.tsx        # Main application component
+├── main.tsx       # Application entry point
+└── index.css      # Global styles and Tailwind directives
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build the application for production
+- `npm run build:dev` - Build the application in development mode
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint for code quality checks
 
-**Use GitHub Codespaces**
+## 🎨 Design System
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project implements a comprehensive design system based on:
 
-## What technologies are used for this project?
+- **Thai Cultural Elements**: Incorporating traditional Thai colors and motifs
+- **Government Standards**: Following official embassy design guidelines
+- **Modern Web Standards**: Responsive design and accessibility best practices
+- **User-Centered Design**: Intuitive navigation and clear information hierarchy
 
-This project is built with:
+## 📱 Responsive Design
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The website is fully responsive and optimized for:
 
-## How can I deploy this project?
+- **Desktop**: 1024px and above
+- **Tablet**: 768px - 1023px
+- **Mobile**: 320px - 767px
 
-Simply open [Lovable](https://lovable.dev/projects/e2985bbe-6b31-4eca-9fd2-85df135b8821) and click on Share -> Publish.
+## ♿ Accessibility Features
 
-## Can I connect a custom domain to my Lovable project?
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- High contrast color schemes
+- Screen reader compatibility
+- Focus management
 
-Yes, you can!
+## 🚀 Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project uses **automated deployment** with GitHub Actions:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Automatic Deployment (Current Setup)
+- Every push to the `main` branch triggers automatic deployment
+- Built with Vite and deployed to GitHub Pages
+- Live site: **https://pailin40.github.io/thai-embassy-helsinki/**
+
+### Manual Deployment Options
+
+#### Vercel
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with zero configuration
+
+#### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to Netlify
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Guidelines
+
+1. Follow the existing code style and conventions
+2. Write meaningful commit messages
+3. Add appropriate TypeScript types
+4. Test your changes across different devices
+5. Ensure accessibility standards are maintained
+6. The deployment workflow will automatically deploy your changes when merged to main
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Pailin** - [@pailin40](https://github.com/pailin40)
+
+Project Link: [https://github.com/pailin40/thai-embassy-helsinki](https://github.com/pailin40/thai-embassy-helsinki)
+
+Live Demo: [https://pailin40.github.io/thai-embassy-helsinki/](https://pailin40.github.io/thai-embassy-helsinki/)
+
+---
+
+## 🙏 Acknowledgments
+
+- Royal Thai Embassy in Helsinki for inspiration
+- shadcn/ui for the excellent component library
+- Radix UI for accessible component primitives
+- Tailwind CSS for the utility-first approach
+- Vite team for the amazing build tool
+- GitHub Pages for free hosting
+
+---
+
+*This project is a redesign concept and is not officially affiliated with the Royal Thai Embassy in Helsinki.*
