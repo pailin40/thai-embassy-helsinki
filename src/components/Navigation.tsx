@@ -66,29 +66,6 @@ const Navigation = () => {
 
   return (
     <nav className="bg-background border-b border-border shadow-card sticky top-0 z-50">
-      {/* Top contact bar */}
-      <div className="bg-primary text-primary-foreground py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
-              <span>+358 44 444 4444</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4" />
-              <span>consular@tembassy.fi</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="h-4 w-4" />
-              <span>Bulevardi 31, 00180 Helsinki</span>
-            </div>
-          </div>
-          <div className="text-sm font-medium">
-            Working Hours: Mon-Fri 9:00-12:00, 13:00-16:00
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
