@@ -50,14 +50,14 @@ const VisaServices = () => {
       step: 1,
       title: "Check Visa Requirements",
       description: "Check the visa requirements from the Embassy's website",
-      link: "https://www.youtube.com/results?search_query=crazy+frog",
+      link: "https://youtu.be/k85mRPqvMbE?si=Ads2mG28CNJB9Dll",
       linkText: "E-visa user manual in English"
     },
     {
       step: 2,
       title: "Submit Online Application",
       description: "Submit visa application form online (all visas must be submitted here)",
-      link: "https://www.youtube.com/results?search_query=crazy+frog",
+      link: "https://youtu.be/k85mRPqvMbE?si=Ads2mG28CNJB9Dll",
       linkText: "Apply at thaievisa.go.th"
     },
     {
@@ -237,7 +237,7 @@ const VisaServices = () => {
                   </div>
                   <Button 
                     className="w-full" 
-                    onClick={() => window.open('https://www.youtube.com/results?search_query=crazy+frog', '_blank')}
+                    onClick={() => window.open('https://youtu.be/k85mRPqvMbE?si=Ads2mG28CNJB9Dll', '_blank')}
                   >
                     Apply Now
                   </Button>
