@@ -302,36 +302,32 @@ const LandingPage = () => {
                 visa requirements to travel guides, we've got you covered.
               </p>
 
-              {/* Action Buttons Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* Responsive Action Buttons Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Button
                   size="lg"
-                  className="h-12 text-sm text-left justify-start hover:bg-red-500"
+                  className="h-12 text-sm text-left justify-start hover:bg-red-500 w-full"
                 >
                   <FileText className="mr-2 h-4 w-4" />
                   Tourist Visa Requirements
                 </Button>
                 <Button
                   size="lg"
-                  className="h-12 text-sm text-left justify-start hover:bg-red-500"
+                  className="h-12 text-sm text-left justify-start hover:bg-red-500 w-full"
                 >
                   <Shield className="mr-2 h-4 w-4" />
                   View COVID Rules
                 </Button>
-              </div>
-
-              {/* Second Row - Same Style */}
-              <div className="grid grid-cols-2 gap-4 mt-4">
                 <Button
                   size="lg"
-                  className="h-12 text-sm text-left justify-start hover:bg-red-500"
+                  className="h-12 text-sm text-left justify-start hover:bg-red-500 w-full"
                 >
                   <Clock className="mr-2 h-4 w-4" />
                   Processing Time
                 </Button>
                 <Button
                   size="lg"
-                  className="h-12 text-sm text-left justify-start hover:bg-red-500"
+                  className="h-12 text-sm text-left justify-start hover:bg-red-500 w-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Download Travel Guide
