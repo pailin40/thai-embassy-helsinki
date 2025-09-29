@@ -1,187 +1,37 @@
-# Royal Thai Embassy Helsinki - Website Redesign
+# Thai Embassy Helsinki - Website Redesign
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Deploy Status](https://github.com/pailin40/thai-embassy-helsinki/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/pailin40/thai-embassy-helsinki/actions)
+A modern UI/UX redesign of the Thai Embassy Helsinki website, focusing on improved user experience and contemporary design principles. [View Live Site](https://thai-embassy-helsinki-redesign.netlify.app/)
 
-A modern, responsive redesign of the Royal Thai Embassy in Helsinki website, featuring improved user experience, accessibility, and contemporary design principles.
+![Screenshot 2025-09-29 070811](https://github.com/user-attachments/assets/0cf29002-6496-49cd-9bb8-6dc520dce0ca)
 
-## 🌐 Live Demo
 
-**[Visit the Live Site](https://pailin40.github.io/thai-embassy-helsinki/)**
 
-> The site is automatically deployed to GitHub Pages whenever changes are pushed to the main branch.
+## 📋 Project Overview
 
-## 🌟 Features
+This project reimagines the Thai Embassy Helsinki website with a focus on:
+- **Landing Page** - Clean, welcoming design with clear navigation
+- **Visa Services** - Streamlined visa application information and processes
+- **Consular Services** - Organized service categories and contact information
 
-- **Modern UI/UX Design**: Clean, professional interface with improved navigation
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Accessibility First**: WCAG compliant design with proper semantic HTML
-- **Fast Performance**: Built with Vite for lightning-fast development and production builds
-- **Component-Based**: Reusable UI components using shadcn/ui library
-- **TypeScript**: Full type safety throughout the application
-- **Dark Mode Support**: Toggle between light and dark themes
-- **Automatic Deployment**: CI/CD pipeline with GitHub Actions
 
-## 🛠️ Technology Stack
+## ✨ Key Features
 
-### Frontend
-- **React 18** - Modern React with hooks and concurrent features
-- **TypeScript** - Type-safe JavaScript for better development experience
-- **Vite** - Next-generation frontend build tool
-- **React Router DOM** - Client-side routing
+- **Modern Design System** - Contemporary UI with consistent styling
+- **Responsive Layout** - Optimized for desktop, tablet, and mobile devices
+- **Intuitive Navigation** - Clear information architecture and user flow
+- **Accessibility Focus** - WCAG guidelines implementation
 
-### Styling & UI
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - High-quality React components
-- **Radix UI** - Unstyled, accessible components
-- **Lucide React** - Beautiful icon library
-- **next-themes** - Theme switching functionality
 
-### Development Tools
-- **ESLint** - Code linting and quality assurance
-- **PostCSS** - CSS processing and optimization
-- **Autoprefixer** - Automatic CSS vendor prefixing
-- **GitHub Actions** - Automated deployment pipeline
+## 🛠️ Technologies Used
 
-## 🚀 Getting Started
+React, TypeScript, Vite, Tailwind CSS, shadcn/ui
 
-### Prerequisites
+## 🎨 Design Focus
 
-- Node.js (version 16.0 or higher)
-- npm or yarn package manager
+This project demonstrates UI/UX design skills including:
+- User research and information architecture
+- Visual hierarchy and typography
+- Color theory and brand consistency
+- Mobile-first responsive design
 
-### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/pailin40/thai-embassy-helsinki.git
-   cd thai-embassy-helsinki
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173` to view the application
-
-## 📁 Project Structure
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Application pages/routes
-├── hooks/         # Custom React hooks
-├── lib/           # Utility functions and configurations
-├── assets/        # Static assets (images, icons, etc.)
-├── App.tsx        # Main application component
-├── main.tsx       # Application entry point
-└── index.css      # Global styles and Tailwind directives
-```
-
-## 🔧 Available Scripts
-
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build the application for production
-- `npm run build:dev` - Build the application in development mode
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint for code quality checks
-
-## 🎨 Design System
-
-This project implements a comprehensive design system based on:
-
-- **Thai Cultural Elements**: Incorporating traditional Thai colors and motifs
-- **Government Standards**: Following official embassy design guidelines
-- **Modern Web Standards**: Responsive design and accessibility best practices
-- **User-Centered Design**: Intuitive navigation and clear information hierarchy
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: 320px - 767px
-
-## ♿ Accessibility Features
-
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- High contrast color schemes
-- Screen reader compatibility
-- Focus management
-
-## 🚀 Deployment
-
-This project uses **automated deployment** with GitHub Actions:
-
-### Automatic Deployment (Current Setup)
-- Every push to the `main` branch triggers automatic deployment
-- Built with Vite and deployed to GitHub Pages
-- Live site: **https://pailin40.github.io/thai-embassy-helsinki/**
-
-### Manual Deployment Options
-
-#### Vercel
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect the Vite configuration
-3. Deploy with zero configuration
-
-#### Netlify
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Guidelines
-
-1. Follow the existing code style and conventions
-2. Write meaningful commit messages
-3. Add appropriate TypeScript types
-4. Test your changes across different devices
-5. Ensure accessibility standards are maintained
-6. The deployment workflow will automatically deploy your changes when merged to main
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-**Pailin** - [@pailin40](https://github.com/pailin40)
-
-Project Link: [https://github.com/pailin40/thai-embassy-helsinki](https://github.com/pailin40/thai-embassy-helsinki)
-
-Live Demo: [https://pailin40.github.io/thai-embassy-helsinki/](https://pailin40.github.io/thai-embassy-helsinki/)
-
----
-
-## 🙏 Acknowledgments
-
-- Royal Thai Embassy in Helsinki for inspiration
-- shadcn/ui for the excellent component library
-- Radix UI for accessible component primitives
-- Tailwind CSS for the utility-first approach
-- Vite team for the amazing build tool
-- GitHub Pages for free hosting
-
----
-
-*This project is a redesign concept and is not officially affiliated with the Royal Thai Embassy in Helsinki.*
